@@ -204,7 +204,7 @@ Return Value:
 
     PAGED_CODE();
 
-    String->Buffer = ExAllocatePoolWithTag( NonPagedPool,
+    String->Buffer = ExAllocatePool2(POOL_FLAG_NON_PAGED_EXECUTE,
                                             String->MaximumLength,
                                             SIMREP_STRING_TAG );
 
